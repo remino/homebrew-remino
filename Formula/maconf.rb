@@ -1,16 +1,16 @@
 class Maconf < Formula
   desc "Get and set various settings in macOS"
   homepage "https://github.com/remino/maconf"
-  url "https://github.com/remino/maconf/archive/refs/tags/v1.1.0.tar.gz"
+  url "https://api.github.com/repos/remino/maconf/zipball/v1.1.0"
   version "1.1.0"
-  sha256 "51b8223eba3a00b3de97e96acb4cbac9ea5fcbf64110b9eec7aee967300eb2ae"
+  sha256 "c2140e54908f3ebc638cd2b2cb29056f80c757af33ce2a09620ad59005c3543f"
   license "MIT"
 
   def install
-    bin.install "maconf"
+    bin.install "./maconf"
   end
 
   test do
-    system "maconf", "-v"
+    system "./maconf", "-v"
   end
 end
