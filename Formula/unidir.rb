@@ -3,7 +3,7 @@ class Unidir < Formula
   homepage "https://github.com/remino/unidir"
   url "https://api.github.com/repos/remino/unidir/zipball/v1.0.0"
   version "1.0.0"
-  sha256 "d5c760a21f7bc1327f04b5b83368e25ab1e3043ef82e58984821c1f215380f1a"
+  sha256 "c582192e647cb8976197febe1e47e2cadeec7d5a4b8da95fbde003656ccee486"
   license "ISC"
 
   def install
