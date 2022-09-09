@@ -3,7 +3,7 @@ class Hashtagalong < Formula
   homepage "https://github.com/remino/hashtagalong"
   url "https://api.github.com/repos/remino/hashtagalong/zipball/v0.1.0"
   version "1.0.0"
-  sha256 "66af9c047daf3c5370a436ff04f2fcac9fb0c44ba39567f9e2429e628fd5c7a8"
+  sha256 "2ab28347d2238fe814841444734936d351c27a51ce5a6e31c4dbd9619c362b44"
   license "ISC"
 
   def install
