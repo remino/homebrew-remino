@@ -1,9 +1,9 @@
 class Waituntil < Formula
   desc "Make new shell script executable file from template"
   homepage "https://github.com/remino/waituntil"
-  url "https://github.com/remino/waituntil/releases/tag/v1.0.0"
+  url "https://api.github.com/repos/remino/mkx/zipball/v1.0.0"
   version "1.0.0"
-  sha256 "9a28bca326589590793635b6a441effbe69a396a19bbc5e64921505839bfc597"
+  sha256 "faaa71aad12e2c4d5346d795d0b5f70dd385a2ef59b2e0c7ad16ee81ea5c87b7"
   license "MIT"
 
   def install
