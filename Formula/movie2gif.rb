@@ -1,5 +1,5 @@
 class Movie2gif < Formula
-  desc "Make new shell script executable file from template"
+  desc "Convert video file into GIF or get info about the file"
   homepage "https://github.com/remino/movie2gif"
   url "https://api.github.com/repos/remino/movie2gif/zipball/v1.0.0"
   version "1.0.0"

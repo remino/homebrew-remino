@@ -1,5 +1,5 @@
 class Vidmod < Formula
-  desc "Make new shell script executable file from template"
+  desc "Do rapid changes to video files using ffmpeg or other tools"
   homepage "https://github.com/remino/vidmod"
   url "https://api.github.com/repos/remino/vidmod/zipball/v1.0.2"
   version "1.0.2"

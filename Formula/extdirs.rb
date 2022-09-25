@@ -1,5 +1,5 @@
 class Extdirs < Formula
-  desc "Make new shell script executable file from template"
+  desc "Move files into separate directories named by their extensions"
   homepage "https://github.com/remino/extdirs"
   url "https://api.github.com/repos/remino/extdirs/zipball/v1.0.0"
   version "1.0.0"
