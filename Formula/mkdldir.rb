@@ -1,16 +1,16 @@
 class Mkdldir < Formula
-  desc "Create password-protected download directory for Apache"
-  homepage "https://github.com/remino/mkdldir"
-  url "https://api.github.com/repos/remino/mkdldir/zipball/v1.1.0"
-  version "1.1.0"
-  sha256 "df5deab9183edd22fc63803299fa07af0357a8853429c5f065a5dc677ca15087"
-  license "MIT"
+	desc "Generate download directory for Apache HTTP Server"
+	homepage "https://github.com/remino/mkdldir"
+	url "https://api.github.com/repos/remino/mkdldir/tarball/v1.2.0"
+	sha256 "f6a8e8c0f4e5bceb374fba50683f7e6044f5373b7b6928ff6a26223b8243e782"
+	version "1.2.0"
+	license "ISC"
 
-  def install
-    bin.install "./mkdldir"
-  end
+	def install
+		bin.install "./mkdldir"
+	end
 
-  test do
-    system "./mkdldir", "-v"
-  end
+	test do
+		system "./mkdldir", "-v"
+	end
 end
