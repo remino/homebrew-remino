@@ -1,9 +1,9 @@
 class Igframe < Formula
 	desc "Fit an image into a specific ratio for Instagram"
 	homepage "https://github.com/remino/igframe"
-	url "https://api.github.com/repos/remino/igframe/tarball/v1.1.1"
-	sha256 "64f141e1f8c433ceb06aa478db5b556d12480df97dde52b347eece776005ca00"
-	version "1.1.1"
+	url "https://api.github.com/repos/remino/igframe/tarball/v1.1.2"
+	sha256 "1db017b4897a937a49edc963fd1f7c15cbba0d69ae2f550e805a8a39aa86235e"
+	version "1.1.2"
 	license "ISC"
 
 	def install
