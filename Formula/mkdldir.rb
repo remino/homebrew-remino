@@ -6,6 +6,8 @@ class Mkdldir < Formula
 	version "1.3.0"
 	license "ISC"
 
+	deprecate! date: "2022-10-24", because: :deprecated_upstream
+
 	def install
 		bin.install "./mkdldir"
 	end
