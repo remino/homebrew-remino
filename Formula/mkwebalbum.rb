@@ -1,9 +1,9 @@
 class Mkwebalbum < Formula
 	desc "Generate album Web page with previews from a directory of photos"
 	homepage "https://github.com/remino/mkwebalbum"
-	url "https://api.github.com/repos/remino/mkwebalbum/tarball/v1.0.1"
-	sha256 "361bf696a8095ad65b473dc6d9a316de9846589031e2e7af54fe1704942517c0"
-	version "1.0.1"
+	url "https://api.github.com/repos/remino/mkwebalbum/tarball/v1.2.0"
+	sha256 "2af0fe5e3f0fde7162dc8e1f6c51cd490ce262da0b502db6d70548823ada7455"
+	version "1.2.0"
 	license "ISC"
 
 	def install
