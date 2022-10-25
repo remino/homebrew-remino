@@ -6,6 +6,8 @@ class Mkwebalbum < Formula
 	version "1.3.0"
 	license "ISC"
 
+	depends_on "imagemagick"
+
 	def install
 		bin.install "./mkwebalbum"
 	end
