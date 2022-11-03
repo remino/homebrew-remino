@@ -1,9 +1,9 @@
 class Getup < Formula
 	desc "Get up and run some things"
 	homepage "https://github.com/remino/getup"
-	url "https://api.github.com/repos/remino/getup/tarball/v1.1.0"
-	sha256 "0552e9a386df6d421a308d0742ec4a870ee7c490afe9483cb694e128c7b6b6c1"
-	version "1.1.0"
+	url "https://api.github.com/repos/remino/getup/tarball/v1.2.0"
+	sha256 "c00318911cb2a93e8b651481996f79e2de4c0f843eb52434d212abbb8272ac19"
+	version "1.2.0"
 	license "ISC"
 
 	def install
