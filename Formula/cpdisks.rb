@@ -1,9 +1,9 @@
 class Cpdisks < Formula
 	desc "Copy several disks one by one in a single directory"
 	homepage "https://github.com/remino/cpdisks"
-	url "https://api.github.com/repos/remino/cpdisks/tarball/v1.0.0"
-	sha256 "9d5ea5b625ca434acb4f5a1eadc7a8e72aecb05dbe7a4f7b3330d2ad1242baa9"
-	version "1.0.0"
+	url "https://api.github.com/repos/remino/cpdisks/tarball/v1.0.1"
+	sha256 "ec8e523c88a6a12c3f30e8556183cebfb846aa8f3e14d147e55a8c9f9aa585d0"
+	version "1.0.1"
 	license "ISC"
 
 	def install
