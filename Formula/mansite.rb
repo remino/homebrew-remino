@@ -1,9 +1,9 @@
 class Mansite < Formula
 	desc "Plain and simple Middleman site template"
 	homepage "https://github.com/remino/mansite"
-	url "https://api.github.com/repos/remino/mansite/tarball/v2.0.5"
-	sha256 "d77a7ac475288ad51efeb1932e479e13771c46267711dfe37f8547128b37036a"
-	version "2.0.5"
+	url "https://api.github.com/repos/remino/mansite/tarball/v2.0.6"
+	sha256 "7bb505f831907fb1f7da86d09583c98201d7a4cd8f1024e21f57c9a4e6e7811f"
+	version "2.0.6"
 	license "ISC"
 
 	def install
