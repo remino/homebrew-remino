@@ -1,16 +1,16 @@
 class Movie2gif < Formula
-  desc "Convert video file into GIF or get info about the file"
-  homepage "https://github.com/remino/movie2gif"
-  url "https://api.github.com/repos/remino/movie2gif/zipball/v1.0.0"
-  version "1.0.0"
-  sha256 "c0640795795021230c7264f3425a05c32907490458f21cf4a56aff89ba5ffb06"
-  license "MIT"
+	desc "Convert video file into GIF or get info about the file"
+	homepage "https://github.com/remino/movie2gif"
+	url "https://api.github.com/repos/remino/movie2gif/tarball/v1.0.1"
+	sha256 "08c094b244a88e2ba13d4895381fb6c21a357cb1e32af636d74670a16a496412"
+	version "1.0.1"
+	license "ISC"
 
-  def install
-    bin.install "./movie2gif"
-  end
+	def install
+		bin.install "./movie2gif"
+	end
 
-  test do
-    system "./movie2gif", "-v"
-  end
+	test do
+		system "./movie2gif", "-v"
+	end
 end
