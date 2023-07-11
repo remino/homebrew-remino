@@ -6,7 +6,7 @@ class Serename < Formula
 	version "1.0.0"
 	license "ISC"
 
-	disable! date: '2023-07-11', reason: "Abandoned in favour of 'rename'. Doing `rename 's/a/b/' *` is the equivalent of `serename 's/a/b/' *`."
+	disable! date: '2023-07-11', because: "Abandoned in favour of 'rename'. Doing `rename 's/a/b/' *` is the equivalent of `serename 's/a/b/' *`."
 
 	def install
 		bin.install "./serename"
