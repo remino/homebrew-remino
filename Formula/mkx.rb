@@ -11,10 +11,8 @@ class Mkx < Formula
 		lib.install Dir["lib/*"]
     (pkgshare/"templates").install Dir["templates/*"]
     man1.install "man/mkx.1"
-	end
 
-  def post_install
-    (bin/"mkx").write <<~EOS
+		(bin/"mkx").write <<~EOS
       #!/usr/bin/env bash
       export MKX_LIB_DIR="#{lib}"
       export MKX_TEMPLATES_DIR="#{pkgshare}/templates"
