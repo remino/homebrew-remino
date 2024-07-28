@@ -21,6 +21,6 @@ class Mkx < Formula
 	end
 
 	test do
-		system "./mkx", "-v"
+		system "#{bin}/mkx", "-v"
 	end
 end
