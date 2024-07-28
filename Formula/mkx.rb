@@ -9,16 +9,16 @@ class Mkx < Formula
 	def install
 		libexec.install "mkx"
 		lib.install Dir["lib/*"]
-    (pkgshare/"templates").install Dir["templates/*"]
-    man1.install "man/mkx.1"
+		(pkgshare/"templates").install Dir["templates/*"]
+		man1.install "man/mkx.1"
 
 		(bin/"mkx").write <<~EOS
-      #!/usr/bin/env bash
-      export MKX_LIB_DIR="#{lib}"
-      export MKX_TEMPLATES_DIR="#{pkgshare}/templates"
-      exec "#{bin}/mkx" "$@"
-    EOS
-  end
+			#!/usr/bin/env bash
+			export MKX_LIB_DIR="#{lib}"
+			export MKX_TEMPLATES_DIR="#{pkgshare}/templates"
+			exec "#{libexec}/mkx" "$@"
+		EOS
+	end
 
 	test do
 		system "./mkx", "-v"
