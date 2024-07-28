@@ -1,14 +1,26 @@
 class Mkx < Formula
 	desc "Make new shell script executable file from template"
+	version "3.0.0"
 	homepage "https://github.com/remino/mkx"
-	url "https://api.github.com/repos/remino/mkx/tarball/v2.3.0"
-	sha256 "bb4e18f47202f9eafa51e8ff07fd87a8da7d5ea1653b148efc044600ca5d6ae3"
-	version "2.3.0"
+	url "https://api.github.com/repos/remino/mkx/tarball/v#{version}"
+	sha256 "4d03da6ccb4e5a72693b4143d5fe807813ba5957364afce764aaf67d52fd945d"
 	license "ISC"
 
 	def install
-		bin.install "./mkx"
+		libexec.install "mkx"
+		lib.install Dir["lib/*"]
+    (pkgshare/"templates").install Dir["templates/*"]
+    man1.install "man/mkx.1"
 	end
+
+  def post_install
+    (bin/"mkx").write <<~EOS
+      #!/usr/bin/env bash
+      export MKX_LIB_DIR="#{lib}"
+      export MKX_TEMPLATES_DIR="#{pkgshare}/templates"
+      exec "#{bin}/mkx" "$@"
+    EOS
+  end
 
 	test do
 		system "./mkx", "-v"
