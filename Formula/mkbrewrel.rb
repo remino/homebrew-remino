@@ -1,13 +1,21 @@
 class Mkbrewrel < Formula
 	desc "Create Brew release from GitHub release"
 	homepage "https://github.com/remino/mkbrewrel"
-	url "https://api.github.com/repos/remino/mkbrewrel/tarball/v2.0.1"
-	sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-	version "2.0.1"
+	url "https://api.github.com/repos/remino/mkbrewrel/tarball/v2.0.3"
+	sha256 "8eab88ea740fb6aa47735ea260b683e1c0dccbf1d3559ab1c3c4055609595072"
+	version "2.0.3"
 	license "ISC"
 
 	def install
-		bin.install "./mkbrewrel"
+		libexec.install "mkbrewrel"
+		lib.install Dir["lib/*"]
+		man1.install "man/mkbrewrel.1"
+
+		(bin/"mkbrewrel").write <<~EOS
+			#!/usr/bin/env bash
+			export MKBREWREL_LIB_DIR="#{lib}"
+			exec "#{libexec}/mkbrewrel" "$@"
+		EOS
 	end
 
 	test do
