@@ -1,9 +1,9 @@
 class Mkprj < Formula
 	desc "Create a dated project directory"
 	homepage "https://github.com/remino/mkprj"
-	url "https://api.github.com/repos/remino/mkprj/tarball/v1.1.0"
-	sha256 "9270f0be20624406b44e27005ffac264034e3d11f80d6e53e2d5c0a2c0d9ca9e"
-	version "1.1.0"
+	url "https://api.github.com/repos/remino/mkprj/tarball/v1.2.0"
+	sha256 "d77a2aac371967402818566d0f483b4f915d30bf683ba525650313fd476dc49b"
+	version "1.2.0"
 	license "ISC"
 
 	def install
