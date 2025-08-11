@@ -1,26 +1,26 @@
 class Mkx < Formula
-	desc "Make new shell script executable file from template"
-	homepage "https://github.com/remino/mkx"
-	url "https://api.github.com/repos/remino/mkx/tarball/v3.1.2"
-	sha256 "094231722a8e1b09ad930a3a34d517781ec650d568f3e83a5138fd2c4bca9235"
-	version "3.1.2"
-	license "ISC"
+  desc "A script to make scripts"
+  homepage "https://github.com/remino/mkx"
+  url "https://api.github.com/repos/remino/mkx/tarball/v3.2.0"
+  sha256 "14bce1de0dccddf1dd9edca87b2392e6e637b585748596968bede9e7d3cd01ea"
+  license "ISC"
 
-	def install
-		libexec.install "mkx"
-		lib.install Dir["lib/*"]
-		(pkgshare/"templates").install Dir["templates/*"]
-		man1.install "man/mkx.1"
+  depends_on "bash"
 
-		(bin/"mkx").write <<~EOS
-			#!/usr/bin/env bash
-			export MKX_LIB_DIR="#{lib}"
-			export MKX_TEMPLATES_DIR="#{pkgshare}/templates"
-			exec "#{libexec}/mkx" "$@"
-		EOS
-	end
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
-	test do
-		system "#{bin}/mkx", "-v"
-	end
+  def install
+    bin.install "mkx"
+    lib.install Dir["lib/*"]
+    pkgshare.install "templates"
+    man1.install "man/mkx.1"
+  end
+
+  test do
+    out = shell_output("#{bin}/mkx -v")
+    assert_match version.to_s, out
+  end
 end
