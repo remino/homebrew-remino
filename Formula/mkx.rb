@@ -1,8 +1,8 @@
 class Mkx < Formula
   desc "A script to make scripts"
   homepage "https://github.com/remino/mkx"
-  url "https://api.github.com/repos/remino/mkx/tarball/v3.2.0"
-  sha256 "14bce1de0dccddf1dd9edca87b2392e6e637b585748596968bede9e7d3cd01ea"
+  url "https://api.github.com/repos/remino/mkx/tarball/v3.2.1"
+  sha256 "785ecfb4ed900d65360aaf4cfc9dd01d417ea09f8e9496f773436541c4851c22"
   license "ISC"
 
   depends_on "bash"
