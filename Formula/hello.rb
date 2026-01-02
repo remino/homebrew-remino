@@ -6,6 +6,7 @@ class Hello < Formula
   sha256 "bb286d8841efc934922a38cdba964421c5aaf27abda20ce09ca11a9082dcf28f"
   license "ISC"
   homepage "https://github.com/remino/remutils"
+  revision 1
 
   depends_on "bash"
 
@@ -15,11 +16,13 @@ class Hello < Formula
   end
 
   def install
-    bin.install ""
+    Dir.chdir(tag) do
+      bin.install "hello"
+    end
   end
 
   test do
-    out = shell_output("#{bin}/")
+    out = shell_output("#{bin}/hello")
     assert_match "hello", out
   end
 end
