@@ -6,7 +6,7 @@ class Hello < Formula
   sha256 "bb286d8841efc934922a38cdba964421c5aaf27abda20ce09ca11a9082dcf28f"
   license "ISC"
   homepage "https://github.com/remino/remutils"
-  revision 1
+  revision 2
 
   depends_on "bash"
 
@@ -16,7 +16,7 @@ class Hello < Formula
   end
 
   def install
-    Dir.chdir(tag) do
+    Dir.chdir("hello@1.0.1") do
       bin.install "hello"
     end
   end
