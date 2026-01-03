@@ -1,9 +1,12 @@
+# vim: set ft=ruby :
 class Mkx < Formula
-  desc "A script to make scripts"
-  homepage "https://github.com/remino/mkx"
-  url "https://api.github.com/repos/remino/mkx/tarball/v3.2.4"
-  sha256 "82cb81ad44b029edfaf95961d3bc1a3371390333d3289d01398417441d3ce7f4"
+  desc "Make new executable shell script file from template."
+  version "3.2.4"
+  url "https://github.com/remino/remutils/releases/download/mkx@3.2.4/mkx@3.2.4.tar.gz"
+  sha256 "6796fb712d9bfcf3b4d625f69f4f00e3498685fdbd4644f8a7ad7d94af36e5a1"
   license "ISC"
+  homepage "https://github.com/remino/remutils"
+  revision 1
 
   depends_on "bash"
 
