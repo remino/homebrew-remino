@@ -1,16 +1,26 @@
+# vim: set ft=ruby :
 class File2dataurl < Formula
-	desc "Convert file to base64 data URL"
-	homepage "https://github.com/remino/file2dataurl"
-	url "https://api.github.com/repos/remino/file2dataurl/tarball/v1.0.1"
-	sha256 "4107b3fdb11173a652a57d3e4d06254aff06fc87e2a6580fc9c09c26bac2fc4c"
-	version "1.0.1"
-	license "ISC"
+  desc "Convert file to base64 data URL."
+  version "1.0.2"
+  url "https://github.com/remino/remutils/releases/download/file2dataurl@1.0.2/file2dataurl@1.0.2.tar.gz"
+  sha256 "c00f6fa540ea5f5474a78038152b6447ad449f4b382ec6c8a9c794f448d0fef2"
+  license "ISC"
+  homepage "https://github.com/remino/remutils"
+  revision 1
 
-	def install
-		bin.install "./file2dataurl"
-	end
+  depends_on "bash"
 
-	test do
-		system "./file2dataurl", "-v"
-	end
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
+  def install
+    bin.install "file2dataurl"
+  end
+
+  test do
+    out = shell_output("#{bin}/file2dataurl -v")
+    assert_match version.to_s, out
+  end
 end
