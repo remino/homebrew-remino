@@ -1,9 +1,9 @@
 # vim: set ft=ruby :
 class Mkx < Formula
   desc "Make new executable shell script file from template."
-  version "3.2.4"
-  url "https://github.com/remino/remutils/releases/download/mkx@3.2.4/mkx@3.2.4.tar.gz"
-  sha256 "6796fb712d9bfcf3b4d625f69f4f00e3498685fdbd4644f8a7ad7d94af36e5a1"
+  version "3.2.5"
+  url "https://github.com/remino/remutils/releases/download/mkx@3.2.5/mkx@3.2.5.tar.gz"
+  sha256 "e8cc3c0fb5fa9ac899155ade7b3a0d5cc33284fae89dcc6c102659b26abbb393"
   license "ISC"
   homepage "https://github.com/remino/remutils"
   revision 1
