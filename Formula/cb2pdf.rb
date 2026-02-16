@@ -1,14 +1,15 @@
 # vim: set ft=ruby :
 class Cb2pdf < Formula
   desc "Convert .cbz and .cbr comic archives to PDF."
-  version "1.1.0"
-  url "https://github.com/remino/remutils/releases/download/cb2pdf@1.1.0/cb2pdf@1.1.0.tar.gz"
-  sha256 "1ba56b6b439b92ed5d419106adad6ee9b29da6df2bad5ca6a5a97982567c498a"
+  version "1.2.0"
+  url "https://github.com/remino/remutils/releases/download/cb2pdf@1.2.0/cb2pdf@1.2.0.tar.gz"
+  sha256 "6f44a939fb62a60115abdeba32aa3b7ce94b778404536f1a2327dff8ead9d6cf"
   license "ISC"
   homepage "https://github.com/remino/remutils"
 
   depends_on "bash"
   depends_on "7zip"
+  depends_on "unar"
   depends_on "img2pdf"
 
   livecheck do
