@@ -1,9 +1,9 @@
 # vim: set ft=ruby :
 class Litesite < Formula
   desc "Create and work with tiny static sites."
-  version "1.0.2"
-  url "https://github.com/remino/remutils/releases/download/litesite@1.0.2/litesite@1.0.2.tar.gz"
-  sha256 "e112df61d4db84ae7e288394753007aaa6714775e3e4e1a635a8e44f2b851551"
+  version "1.1.0"
+  url "https://github.com/remino/remutils/releases/download/litesite@1.1.0/litesite@1.1.0.tar.gz"
+  sha256 "ec03bc5fa3b5fce2125b44fe54fccae56325787da0bfd2904fb9bfc0c883f1a7"
   license "ISC"
   homepage "https://github.com/remino/remutils/tree/main/rsdeploy"
   revision 1
