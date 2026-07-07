@@ -1,9 +1,9 @@
 # vim: set ft=ruby :
 class Imgmod < Formula
   desc "Image modification helpers."
-  version "1.0.1"
-  url "https://github.com/remino/remutils/releases/download/imgmod@1.0.1/imgmod@1.0.1.tar.gz"
-  sha256 "9e25f596a36733d95a8fa76acc97f6db2c6f474732632b8ed515f51b2a609909"
+  version "1.2.0"
+  url "https://github.com/remino/remutils/releases/download/imgmod@1.2.0/imgmod@1.2.0.tar.gz"
+  sha256 "4ff2d43bbf7cb71a2ec78e9877aacfcb825acb51d87afc42f89fc73ca173cf31"
   license "ISC"
   homepage "https://github.com/remino/remutils"
 
