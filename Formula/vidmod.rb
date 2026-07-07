@@ -1,9 +1,9 @@
 # vim: set ft=ruby :
 class Vidmod < Formula
   desc "Video modification helpers."
-  version "2.0.0"
-  url "https://github.com/remino/remutils/releases/download/vidmod@2.0.0/vidmod@2.0.0.tar.gz"
-  sha256 "6341fd9b40d172e678c1bde024056177242f554888381dc68f05ec0fa16bb685"
+  version "2.2.0"
+  url "https://github.com/remino/remutils/releases/download/vidmod@2.2.0/vidmod@2.2.0.tar.gz"
+  sha256 "c2ae97f7641fcbc31d68bfc7698b693a5dee42b3307a050d1f38f39448db3fa4"
   license "ISC"
   homepage "https://github.com/remino/remutils"
 
