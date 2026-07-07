@@ -1,7 +1,7 @@
 # vim: set ft=ruby :
 class Vidmod < Formula
   desc "Video modification helpers."
-  version "2.4.0"
+  version "2.4.0_1"
   url "https://github.com/remino/remutils/releases/download/vidmod@2.4.0/vidmod@2.4.0.tar.gz"
   sha256 "64d422ab68b9a7d250ec3e6973356ca4f1d8c1143248b92be2028c8dc094b1a6"
   license "ISC"
@@ -21,7 +21,7 @@ class Vidmod < Formula
     bash_completion.install libexec / "completions/bash/vidmod" => "vidmod"
     zsh_completion.install libexec / "completions/zsh/_vidmod" => "_vidmod"
     fish_completion.install libexec / "completions/fish/vidmod.fish"
-    man1.install Dir["man/*.1"]
+    man1.install Dir["#{libexec}/man/*.1"]
   end
 
   test do
