@@ -3,10 +3,10 @@ class Litesite < Formula
   desc "Create and work with tiny static sites."
   version "2.2.1"
   url "https://github.com/remino/remutils/releases/download/litesite@2.2.1/litesite@2.2.1.tar.gz"
-  sha256 "85fb298cc181de8c8da5688afd421994fd5f84b23e3f9e1e92e9d4ec5181e0bb"
+  sha256 "19aea04315d8c7e6427ec7fba6ecd11b2e341e212835362411791fd3a9202a91"
   license "ISC"
   homepage "https://github.com/remino/remutils/tree/main/litesite"
-  revision 1
+  revision 2
 
   depends_on "rust" => :build
   depends_on "imagemagick"
@@ -20,8 +20,8 @@ class Litesite < Formula
     system "cargo", "install", *std_cargo_args(root: libexec, path: ".")
     libexec.install "templates"
 
-    bin.write_env_script libexec / "bin/litesite",
-                         LITESITE_TEMPLATE_DIR: libexec / "templates"
+    (bin / "litesite").write_env_script libexec / "bin/litesite",
+                                        LITESITE_TEMPLATE_DIR: libexec / "templates"
     man1.install "man/litesite.1"
   end
 
