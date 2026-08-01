@@ -1,16 +1,26 @@
+# vim: set ft=ruby :
 class Mkprj < Formula
-	desc "Create a dated project directory"
-	homepage "https://github.com/remino/mkprj"
-	url "https://api.github.com/repos/remino/mkprj/tarball/v2.1.0"
-	sha256 "466d6b8895121e8bf28a5fb46dd367b604403d272e7e42acd5c25f3b8c6143a7"
-	version "2.1.0"
-	license "ISC"
+  desc "Create dated project directories from optional templates."
+  version "3.0.0"
+  url "https://github.com/remino/remutils/releases/download/mkprj@3.0.0/mkprj@3.0.0.tar.gz"
+  sha256 "4217888ac43acd536002440809975320d765a5dbb1d4b4366bb17f56f5e89c3f"
+  license "ISC"
+  homepage "https://github.com/remino/remutils"
 
-	def install
-		bin.install "./mkprj"
-	end
+  depends_on "bash"
 
-	test do
-		system "./mkprj", "-v"
-	end
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
+  def install
+    bin.install "mkprj"
+    libexec.install "lib", "templates"
+    man1.install "man/mkprj.1"
+  end
+
+  test do
+    system "#{bin}/mkprj", "-v"
+  end
 end
