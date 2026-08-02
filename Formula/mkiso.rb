@@ -1,9 +1,9 @@
 # vim: set ft=ruby :
 class Mkiso < Formula
   desc "Wrapper for hdiutil to make an ISO volume file out of a directory."
-  version "1.0.1"
-  url "https://github.com/remino/remutils/releases/download/mkiso@1.0.1/mkiso@1.0.1.tar.gz"
-  sha256 "8810354f1edf5ce37897ea5e4fe3f7caefd5d19893d45b639166445a1bbfb63a"
+  version "1.0.2"
+  url "https://github.com/remino/remutils/releases/download/mkiso@1.0.2/mkiso@1.0.2.tar.gz"
+  sha256 "5e4908e0d5005c3ed9065068b39557854b4c078fa1a98f5311ef4b8a3d7615ed"
   license "ISC"
   homepage "https://github.com/remino/remutils"
 
@@ -17,6 +17,7 @@ class Mkiso < Formula
 
   def install
     bin.install "mkiso"
+    man1.install "man/mkiso.1"
   end
 
   test do
