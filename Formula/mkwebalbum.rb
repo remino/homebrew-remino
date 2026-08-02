@@ -1,18 +1,25 @@
+# vim: set ft=ruby :
 class Mkwebalbum < Formula
-	desc "Generate album Web page with previews from a directory of photos"
-	homepage "https://github.com/remino/mkwebalbum"
-	url "https://api.github.com/repos/remino/mkwebalbum/tarball/v1.3.0"
-	sha256 "356acd10ef9724abcad95f49eb659800dc04074a3db16cc993a30642481df267"
-	version "1.3.0"
-	license "ISC"
+  desc "Generate a responsive HTML photo album from a directory"
+  version "1.4.0"
+  url "https://github.com/remino/remutils/releases/download/mkwebalbum@1.4.0/mkwebalbum@1.4.0.tar.gz"
+  sha256 "2cf26abd3c757070e3897a4f5b2bb73f07b3c1a360e75e6e2a90157c446cc9d4"
+  license "ISC"
+  homepage "https://github.com/remino/remutils"
 
-	depends_on "imagemagick"
+  depends_on "imagemagick"
 
-	def install
-		bin.install "./mkwebalbum"
-	end
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
-	test do
-		system "./mkwebalbum", "-v"
-	end
+  def install
+    bin.install "mkwebalbum"
+    man1.install "man/mkwebalbum.1"
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/mkwebalbum -v")
+  end
 end
