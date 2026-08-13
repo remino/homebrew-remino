@@ -1,9 +1,9 @@
 # vim: set ft=ruby :
 class Mkprj < Formula
   desc "Create dated project directories from optional templates."
-  version "3.0.2"
-  url "https://github.com/remino/remutils/releases/download/mkprj@3.0.2/mkprj@3.0.2.tar.gz"
-  sha256 "0f74480f8a0ab475520bffb856953d148e1a81f8b48c2dfbe8a82e2c567efa15"
+  version "3.0.3"
+  url "https://github.com/remino/remutils/releases/download/mkprj@3.0.3/mkprj@3.0.3.tar.gz"
+  sha256 "c1c654018a2d6c727c9a484c70d748b256d09beaa018575bce00a1832dd2cd9a"
   license "ISC"
   homepage "https://github.com/remino/remutils"
 
