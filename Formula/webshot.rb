@@ -1,9 +1,9 @@
 # vim: set ft=ruby :
 class Webshot < Formula
   desc "Capture a webpage as an image."
-  version "1.1.0"
-  url "https://github.com/remino/remutils/releases/download/webshot@1.1.0/webshot@1.1.0.tar.gz"
-  sha256 "6920f2a8c46fa86f0f1093e3dcdfa8f3867c75bedd200982be9cf41962a96ba3"
+  version "1.1.1"
+  url "https://github.com/remino/remutils/releases/download/webshot@1.1.1/webshot@1.1.1.tar.gz"
+  sha256 "ec86779edcc1090d5b03ea8a39e86b05ee6f912a543f30b03779e5a5ab0c3e86"
   license "ISC"
   homepage "https://github.com/remino/remutils"
 
