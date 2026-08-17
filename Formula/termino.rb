@@ -2,14 +2,11 @@
 class Termino < Formula
   desc "Termino FIGlet font"
   homepage "https://github.com/remino/termino"
-  url "https://github.com/remino/termino/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "2692a01af866d2de226211ec0dc1c7155f6a6a65e4b79e80b066f9ab65ac07a7"
-  revision 3
+  url "https://github.com/remino/termino/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "4e49eb8ebf88cd4dc4cad74bc4246e0b80ed5b2259c4af97d81d187b67fa7bf8"
   license "ISC"
 
   depends_on "figlet"
-  option "with-clock", "Install termino-clock (requires Python)"
-  depends_on "python@3.14" if build.with? "clock"
 
   livecheck do
     url :stable
@@ -17,18 +14,16 @@ class Termino < Formula
   end
 
   def install
-    (share/"figlet").install "termino.flf", "termino-tabular.flf", "termino-mono.flf"
-    if build.with? "clock"
-      libexec.install "bin/termino-clock"
-      (bin/"termino-clock").write_env_script libexec/"termino-clock", PATH: "#{Formula['python@3.14'].opt_bin}:#{Formula['figlet'].opt_bin}:$PATH"
-      man1.install "man/termino-clock.1"
-    end
+    (share/"figlet").install "termino.flf", "termino-raster.flf", "termino-tabular.flf", "termino-mono.flf"
   end
 
   def caveats
     <<~EOS
       To use Termino:
         figlet -d #{opt_share}/figlet -f termino "TERMINO"
+
+      For the original # raster:
+        figlet -d #{opt_share}/figlet -f termino-raster "TERMINO"
 
       For equal-width, centered numerals:
         figlet -d #{opt_share}/figlet -f termino-tabular "2026"
@@ -40,8 +35,8 @@ class Termino < Formula
 
   test do
     system Formula["figlet"].opt_bin/"figlet", "-d", share/"figlet", "-f", "termino", "TERMINO"
+    system Formula["figlet"].opt_bin/"figlet", "-d", share/"figlet", "-f", "termino-raster", "TERMINO"
     system Formula["figlet"].opt_bin/"figlet", "-d", share/"figlet", "-f", "termino-tabular", "2026"
     system Formula["figlet"].opt_bin/"figlet", "-d", share/"figlet", "-f", "termino-mono", "TERMINO"
-    system bin/"termino-clock", "--time-only" if build.with? "clock"
   end
 end
