@@ -4,11 +4,11 @@ class Termino < Formula
   homepage "https://github.com/remino/termino"
   url "https://github.com/remino/termino/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "2692a01af866d2de226211ec0dc1c7155f6a6a65e4b79e80b066f9ab65ac07a7"
-  revision 1
+  revision 2
   license "ISC"
 
   depends_on "figlet"
-  depends_on "python@3.14"
+  depends_on "python@3.14" => :optional
 
   livecheck do
     url :stable
@@ -17,9 +17,11 @@ class Termino < Formula
 
   def install
     (share/"figlet").install "termino.flf", "termino-tabular.flf", "termino-mono.flf"
-    libexec.install "bin/termino-clock"
-    (bin/"termino-clock").write_env_script libexec/"termino-clock", PATH: Formula["python@3.14"].opt_bin
-    man1.install "man/termino-clock.1"
+    if build.with? "python@3.14"
+      libexec.install "bin/termino-clock"
+      (bin/"termino-clock").write_env_script libexec/"termino-clock", PATH: "#{Formula['python@3.14'].opt_bin}:#{Formula['figlet'].opt_bin}:$PATH"
+      man1.install "man/termino-clock.1"
+    end
   end
 
   def caveats
@@ -39,6 +41,9 @@ class Termino < Formula
     system Formula["figlet"].opt_bin/"figlet", "-d", share/"figlet", "-f", "termino", "TERMINO"
     system Formula["figlet"].opt_bin/"figlet", "-d", share/"figlet", "-f", "termino-tabular", "2026"
     system Formula["figlet"].opt_bin/"figlet", "-d", share/"figlet", "-f", "termino-mono", "TERMINO"
-    system bin/"termino-clock", "--time-only"
+    system Formula["figlet"].opt_bin/"figlet", "-f", "termino", "TERMINO"
+    system Formula["figlet"].opt_bin/"figlet", "-f", "termino-tabular", "2026"
+    system Formula["figlet"].opt_bin/"figlet", "-f", "termino-mono", "TERMINO"
+    system bin/"termino-clock", "--time-only" if build.with? "python@3.14"
   end
 end
