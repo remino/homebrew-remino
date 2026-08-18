@@ -1,16 +1,25 @@
+# vim: set ft=ruby :
 class Rmnlogo < Formula
-	desc "Outputs the RÉMINO logo in ASCII art and ANSI colours."
-	homepage "https://github.com/remino/rmnlogo"
-	url "https://api.github.com/repos/remino/rmnlogo/tarball/v1.0.0"
-	sha256 "f841577716c7a357f7784a0835ef0fd31298f138d9067e21b012f1453706d3b6"
-	version "1.0.0"
-	license "ISC"
+  desc "Outputs the RÉMINO logo in ASCII art and ANSI colours."
+  version "1.1.0"
+  url "https://github.com/remino/remutils/releases/download/rmnlogo@1.1.0/rmnlogo@1.1.0.tar.gz"
+  sha256 "67aeb2ee41d01c398ae1f99aee29d8775705e69701438ff9acfca595b3dfbd08"
+  license "ISC"
+  homepage "https://github.com/remino/remutils/tree/main/rmnlogo"
 
-	def install
-		bin.install "./rmnlogo"
-	end
+  depends_on "bash"
 
-	test do
-		system "./rmnlogo", "-v"
-	end
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
+  def install
+    bin.install "rmnlogo"
+    man1.install "man/rmnlogo.1"
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/rmnlogo -v")
+  end
 end
