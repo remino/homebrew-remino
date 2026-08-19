@@ -6,6 +6,7 @@ class Vidmod < Formula
   sha256 "097aba6a7b398ef25cdffbbd33c548d226a3d4b2f4216048f3da00f666d07d6a"
   license "ISC"
   homepage "https://github.com/remino/remutils"
+  revision 1
 
   depends_on "bash"
   depends_on "ffmpeg"
