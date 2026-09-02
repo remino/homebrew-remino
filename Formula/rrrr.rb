@@ -1,9 +1,9 @@
 # vim: set ft=ruby :
 class Rrrr < Formula
   desc "Create rsync snapshot backups over SSH"
-  version "1.0.1"
-  url "https://github.com/remino/remutils/releases/download/rrrr@1.0.1/rrrr@1.0.1.tar.gz"
-  sha256 "87245e4c7d729bbf4d9a831b902c649dec070563c3ff1676ae327224cf30674b"
+  version "1.2.0"
+  url "https://github.com/remino/remutils/releases/download/rrrr@1.2.0/rrrr@1.2.0.tar.gz"
+  sha256 "c588c558f00a5e7153ff0ec4c5d995677741745a8ee3e151aeca1e60a918aa20"
   license "ISC"
   homepage "https://github.com/remino/remutils/tree/main/rrrr"
 
