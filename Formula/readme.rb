@@ -1,9 +1,8 @@
 # vim: set ft=ruby :
 class Readme < Formula
   desc "Open the nearest README file"
-  version "0.1.0"
-  url "https://github.com/remino/remutils/releases/download/readme@0.1.0/readme@0.1.0.tar.gz"
-  sha256 "3a991a30f2be0eefe31de46fba260e016f850d48beb135064a4c6c2401c91bee"
+  url "https://github.com/remino/remutils/releases/download/readme@0.2.0/readme@0.2.0.tar.gz"
+  sha256 "71993f18e8e1b0a19e1f87014df7566908aff39bf52ee51db59270879c01cc71"
   license "ISC"
   homepage "https://remino.net/readme/"
 
