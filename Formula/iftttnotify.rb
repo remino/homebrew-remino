@@ -1,16 +1,23 @@
+# vim: set ft=ruby :
 class Iftttnotify < Formula
-  desc "Send notification to IFTTT Webhook using Web request"
-  homepage "https://github.com/remino/iftttnotify"
-  url "https://api.github.com/repos/remino/iftttnotify/zipball/v1.0.1"
-  version "1.0.1"
-  sha256 "31557c7ea2fb3cb1cbe5b69e9d0a02414a44565ff028e2f6f04221d804f9f356"
-  license "MIT"
+  desc "Send IFTTT Webhooks notifications from the command line"
+  url "https://github.com/remino/remutils/releases/download/iftttnotify@1.0.1/iftttnotify@1.0.1.tar.gz"
+  sha256 "e08931312be8c40d6d575fd17ad456ef535e2b1401cbc4b1fb06d83b2ab6d03d"
+  license "ISC"
+  homepage "https://github.com/remino/remutils/tree/main/iftttnotify"
+  revision 1
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   def install
-    bin.install "./iftttnotify"
+    bin.install "iftttnotify"
+    man1.install "man/iftttnotify.1"
   end
 
   test do
-    system "./iftttnotify", "-v"
+    assert_match version.to_s, shell_output("#{bin}/iftttnotify -v")
   end
 end
