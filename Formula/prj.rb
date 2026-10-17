@@ -5,6 +5,7 @@ class Prj < Formula
   sha256 "10f431e49bf568002fa779a30c1a830920421774dd611029fd10aaa1336a2b64"
   license "ISC"
   homepage "https://github.com/remino/remutils"
+  revision 1
 
   depends_on "bash"
 
@@ -16,7 +17,7 @@ class Prj < Formula
   def install
     bin.install "prj"
     bin.install "mkprj"
-    libexec.install "lib" => "prj/lib", "templates" => "prj/templates"
+    (libexec / "prj").install "lib", "templates"
     man1.install "man/prj.1"
     man1.install "man/mkprj.1"
   end
